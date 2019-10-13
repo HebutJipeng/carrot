@@ -18,9 +18,33 @@ module.exports = appInfo => {
   // add your middleware config here
   config.middleware = [];
 
+  config.cors = {
+    origin: '*', // 访问白名单,根据你自己的需要进行设置
+    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
+  };
+
+  config.security = {
+    csrf: {
+      enable: false,
+    }
+  }
+
+  config.mongoose = {
+    client: {
+      url: "mongodb://140.143.193.74:27017/tiandy",
+      options: {
+        useNewUrlParser: true
+      }
+    }
+  };
+
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',
+    middleware: ["errorHandler"],
+    errorHandler: {
+      match: "/user"
+    }
   };
 
   return {
