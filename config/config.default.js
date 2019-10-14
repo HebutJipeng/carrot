@@ -29,6 +29,13 @@ module.exports = appInfo => {
     }
   }
 
+  config.view = {
+    defaultViewEngine: "nunjucks",
+    mapping: {
+      ".html": "nunjucks" //左边写成.html后缀，会自动渲染.html文件
+    }
+  };
+
   config.mongoose = {
     client: {
       url: "mongodb://140.143.193.74:27017/tiandy",

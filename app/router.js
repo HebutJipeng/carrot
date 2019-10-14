@@ -9,4 +9,5 @@ module.exports = app => {
   router.get('/test', controller.home.testMongo);
   router.get("/testadd", controller.home.testAdd);
   router.post("/user/create", controller.home.create);
+  router.get('/form', controller.home.form)
 };

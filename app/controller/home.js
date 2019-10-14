@@ -37,6 +37,13 @@ class HomeController extends Controller {
     this.ctx.service.user.add(ctx.request.body)
     ctx.body = ctx.request.body;
   }
+
+  async form() {
+    const title = 'AI视界 享未来'
+    await this.ctx.render('index', {
+      title
+    })
+  }
 }
 
 module.exports = HomeController;
