@@ -130,6 +130,7 @@ input:-ms-input-placeholder{  /* Internet Explorer 10-11 */
     color: #fff;
     outline: none;
     font-size: 14px;
+    appearance: none;
 }
 
 input::-webkit-input-placeholder{
