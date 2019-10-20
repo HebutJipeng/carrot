@@ -7,11 +7,10 @@ module.exports = app => {
   const UserSchema = new Schema({
     name: {
       type: String,
-      unique: true,
       required: true
     },
     mobile: {
-      type: Number,
+      type: String,
       required: true
     },
     company: {

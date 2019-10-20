@@ -28,14 +28,15 @@ class HomeController extends Controller {
     const { ctx } = this
     const userRule = {
       name: { type: "string" },
-      mobile: { type: "number" },
+      mobile: { type: "string" },
       company: { type: "string" },
-      area: { type: "number" },
+      area: { type: "string" },
       industry: { type: "string", required: false }
     };
     ctx.validate(userRule, ctx.request.body);
-    this.ctx.service.user.add(ctx.request.body)
-    ctx.body = ctx.request.body;
+    const res = await this.ctx.service.user.add(ctx.request.body)
+    const res_pic = await ctx.service.user.getUserCard(ctx.request.body)
+    ctx.helper.success({ ctx, res: res_pic })
   }
 
   async form() {

@@ -1,17 +1,67 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>{{ title }}</title>
-    <link rel="stylesheet" href="/public/css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" charset="utf-8"></script>
-</head>
+    <link rel="stylesheet" href="/public/css/reset.css" />
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"
+      charset="utf-8"
+    ></script>
+    <script src="https://cdn.bootcss.com/axios/0.19.0-beta.1/axios.min.js"></script>
+  </head>
 
-<body>
-    <div id="app"></div>
-    <script src="/public/js/index.js"></script>
-</body>
+  <body>
+    <div id="app">
+      <div class="wrapper" v-if="!step">
+        {% raw %}
+        <div class="langs" @click="langsChange"></div>
+        <div class="content">
+          <img class="logo" src="/public/image/logo.png" alt="" />
+          <img class="us" :src="connetUs" alt="" :style="{ 'width': langs === 'cn' ? '32%' : '40%'}" />
+          <div class="form">
+            <div class="nes">
+              <input type="text" class="input" :placeholder="langs === 'cn' ? '姓名' : 'NAME'" v-model="form.name" />
+            </div>
+            <div class="nes">
+              <input type="tel" class="input" :placeholder="langs === 'cn' ? '联系方式' : 'CONTACT INFOMATION'" v-model="form.mobile" />
+            </div>
+            <div class="nes">
+              <input type="text" class="input" :placeholder="langs === 'cn' ? '公司名称' : 'COMPANY NAME'" v-model="form.company" />
+            </div>
+            <div class="nes right" v-if="langs === 'cn'">
+              <select name="area" placeholder="选择地区" v-model="form.area">
+                <option value="">选择地区</option>
+                <option :value="item.key" v-for="item in province">{{ item.name }}</option>
+              </select>
+            </div>
+            <div class="nes not right" v-if="langs === 'cn'">
+              <select name="industry" placeholder="选择行业" v-model="form.industry">
+                <option value="">选择行业</option>
+                <option :value="item.key" v-for="item in industry">{{ item.name }}</option>
+              </select>
+            </div>
+          </div>
+          <div class="mark" v-if="langs === 'cn'">注:*星号为必填项</div>
+          <a class="button" @click="submit" :style="{ backgroundImage: 'url(' + next + ')', 'marginTop': langs === 'cn' ? '12%' : '20%'}"></a>
+          <img src="/public/image/bottom.png" alt="" class="logo-2" :style="{ 'marginTop': langs === 'cn' ? '12%' : '30%' }">
+          
+        </div>
+        <div class="tips" v-show="show">{{ showText }}</div>
+        {% endraw %}
+      </div>
+      <div class="pic-wrapper" v-else>
+        <img v-for="item in pics" :src="item" alt="">
+      </div>
+    </div>
+    <script type="text/javascript" src="/public/js/province.js"></script>
+    <script type="text/javascript" src="/public/js/industry.js"></script>
+    <script type="text/javascript" src="/public/js/index.js"></script>
+  </body>
 </html>
