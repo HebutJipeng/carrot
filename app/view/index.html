@@ -19,8 +19,8 @@
 
   <body>
     <div id="app">
+      {% raw %}
       <div class="wrapper" v-if="!step">
-        {% raw %}
         <div class="langs" @click="langsChange"></div>
         <div class="content">
           <img class="logo" src="/public/image/logo.png" alt="" />
@@ -54,12 +54,12 @@
           
         </div>
         <div class="tips" v-show="show">{{ showText }}</div>
-        {% endraw %}
       </div>
       <div class="pic-wrapper" v-else>
-        <div class="top">长按图片可保存·LONG PRESS THE PICTURE TO SAVE</div>
+        <div class="top">{{ langs === 'cn'? '长按图片可保存' : 'LONG PRESS THE PICTURE TO SAVE' }}</div>
         <img v-for="item in pics" :src="item" alt="">
       </div>
+      {% endraw %}
     </div>
     <script type="text/javascript" src="/public/js/province.js"></script>
     <script type="text/javascript" src="/public/js/industry.js"></script>
