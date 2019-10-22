@@ -55,7 +55,7 @@ var app = new Vue({
     submit() {
       let times = this.getTimes()
       console.log('times ==>', times)
-      if (times >= 3) {
+      if (times >= 20) {
         this.showText =
           this.langs === "cn"
             ? "超过单个设备最多请求次数"

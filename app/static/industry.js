@@ -1,5 +1,5 @@
 module.exports = [
-  { name: "公安法制", key: "gongan", pic: ["gongan"] },
+  { name: "公安法制", key: "gongan", pic: ["gonganfazhi"] },
   { name: "纪委/监委", key: "jiweijianwei", pic: ["jiweijianwei"] },
   { name: "监管", key: "jianguan", pic: ["jianguan"] },
   { name: "检察院/法院", key: "jianchayuan", pic: ["jianchayuan"] },

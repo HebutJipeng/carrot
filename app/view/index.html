@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/public/css/reset.css" />
     <link rel="stylesheet" href="/public/css/style.css" />
     <script
-      src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"
+      src="https://cdn.bootcss.com/vue/2.6.10/vue.js"
       charset="utf-8"
     ></script>
     <script src="https://cdn.bootcss.com/axios/0.19.0-beta.1/axios.min.js"></script>
@@ -57,6 +57,7 @@
         {% endraw %}
       </div>
       <div class="pic-wrapper" v-else>
+        <div class="top">长按图片可保存·LONG PRESS THE PICTURE TO SAVE</div>
         <img v-for="item in pics" :src="item" alt="">
       </div>
     </div>

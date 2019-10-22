@@ -186,9 +186,27 @@ input:-ms-input-placeholder{  /* Internet Explorer 10-11 */
 }
 
 .pic-wrapper {
+    position: relative;
     font-size: 0;
 }
 
 .pic-wrapper img {
     width: 100%;
+}
+
+.top {
+    font-size: 13px;
+    text-align: center;
+    line-height: 2;
+    background: rgba(255,255,255, 0.4);
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+@media screen and (min-device-aspect-ratio: 56/100){
+    .langs {
+        top: 13%;
+    }
 }
