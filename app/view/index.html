@@ -56,8 +56,9 @@
         <div class="tips" v-show="show">{{ showText }}</div>
       </div>
       <div class="pic-wrapper" v-else>
-        <div class="top">{{ langs === 'cn'? '长按图片可保存' : 'LONG PRESS THE PICTURE TO SAVE' }}</div>
+        <div class="top" :style="{ display: tipshow ? 'block' : 'none'}">{{ langs === 'cn'? '长按图片可保存' : 'LONG PRESS THE PICTURE TO SAVE' }}</div>
         <img v-for="item in pics" :src="item" alt="">
+        <img class="last" @click="lastStep" src="/public/image/last-2.png" alt="">
       </div>
       {% endraw %}
     </div>

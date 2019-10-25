@@ -33,7 +33,8 @@ var app = new Vue({
     show: false,
     showText: "请填写必填项",
     step: 0,
-    pics: []
+    pics: [],
+    tipshow: false
   },
   computed: {
     connetUs() {
@@ -47,14 +48,17 @@ var app = new Vue({
         : "/public/image/next_en.png";
     }
   },
+  mounted() {
+    this.tipshow = true;
+  },
   methods: {
     langsChange() {
       this.langs = this.langs === "cn" ? "en" : "cn";
       this.form = JSON.parse(JSON.stringify(this.formTpl));
     },
     submit() {
-      let times = this.getTimes()
-      console.log('times ==>', times)
+      let times = this.getTimes();
+      console.log("times ==>", times);
       if (times >= 20) {
         this.showText =
           this.langs === "cn"
@@ -72,7 +76,7 @@ var app = new Vue({
         this.form.area = "haiwai";
       }
 
-      if (!(/^\d+$/g.test(this.form.mobile))) {
+      if (!/^\d+$/g.test(this.form.mobile)) {
         this.showText =
           this.langs === "cn"
             ? "请填写正确手机号"
@@ -108,7 +112,7 @@ var app = new Vue({
           if (res.code === 0) {
             this.step = 1;
             this.pics = res.data;
-            this.setTimes(++times)
+            this.setTimes(++times);
           }
         })
         .catch(function(error) {
@@ -119,8 +123,12 @@ var app = new Vue({
       return parseInt(window.localStorage.getItem("request_times") || 0);
     },
     setTimes(n) {
-      console.log(n)
-      window.localStorage.setItem('request_times', n.toString())
+      console.log(n);
+      window.localStorage.setItem("request_times", n.toString());
+    },
+    lastStep() {
+      this.step = 0;
+      this.form = JSON.parse(JSON.stringify(this.formTpl));
     }
   }
 });

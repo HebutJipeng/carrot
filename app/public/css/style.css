@@ -103,7 +103,7 @@ input:-ms-input-placeholder{  /* Internet Explorer 10-11 */
 }
 
 .nes.right:after {
-        content: '';
+    content: '';
     position: absolute;
     top: 8px;
     right: 11px;
@@ -203,6 +203,16 @@ input:-ms-input-placeholder{  /* Internet Explorer 10-11 */
     width: 100%;
     top: 0;
     left: 0;
+    display: none;
+}
+
+.pic-wrapper .last {
+    width: 49.8%;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -70px;
 }
 
 @media screen and (min-device-aspect-ratio: 56/100){
