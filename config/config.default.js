@@ -47,11 +47,11 @@ module.exports = appInfo => {
 
   // config.cluster = {
   //   listen: {
-  //     port: 7001,
+  //     port: 80,
   //     hostname: '127.0.0.1', // 不建议设置 hostname 为 '0.0.0.0'，它将允许来自外部网络和来源的连接，请在知晓风险的情况下使用
   //     // path: '/var/run/egg.sock',
-  //     key: '/home/Nginx/2_www.pengji.xyz.key',
-  //     cert: '/home/Nginx/1_www.pengji.xyz_bundle.crt'
+  //     // key: '/home/Nginx/2_www.pengji.xyz.key',
+  //     // cert: '/home/Nginx/1_www.pengji.xyz_bundle.crt',
   //   },
   // };
 
