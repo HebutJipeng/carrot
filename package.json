@@ -30,7 +30,7 @@
     "node": ">=10.0.0"
   },
   "scripts": {
-    "start": "egg-scripts start --port=443 --daemon --title=egg-server-carrot --https.key='/home/Nginx/2_www.pengji.xyz.key' --https.cert='/home/Nginx/1_www.pengji.xyz_bundle.crt'",
+    "start": "egg-scripts start --port=80 --daemon --title=egg-server-carrot",
     "stop": "egg-scripts stop --title=egg-server-carrot",
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",
