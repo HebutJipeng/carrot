@@ -20,38 +20,48 @@ module.exports = appInfo => {
 
   config.cors = {
     origin: '*', // 访问白名单,根据你自己的需要进行设置
-    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
+    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH',
   };
 
   config.security = {
     csrf: {
       enable: false,
-    }
-  }
+    },
+  };
 
   config.view = {
-    defaultViewEngine: "nunjucks",
+    defaultViewEngine: 'nunjucks',
     mapping: {
-      ".html": "nunjucks" //左边写成.html后缀，会自动渲染.html文件
-    }
+      '.html': 'nunjucks', // 左边写成.html后缀，会自动渲染.html文件
+    },
   };
 
   config.mongoose = {
     client: {
-      url: "mongodb://140.143.193.74:27017/tiandy",
+      url: 'mongodb://140.143.193.74:27017/tiandy',
       options: {
-        useNewUrlParser: true
-      }
-    }
+        useNewUrlParser: true,
+      },
+    },
   };
+
+  // config.cluster = {
+  //   listen: {
+  //     port: 7001,
+  //     hostname: '127.0.0.1', // 不建议设置 hostname 为 '0.0.0.0'，它将允许来自外部网络和来源的连接，请在知晓风险的情况下使用
+  //     // path: '/var/run/egg.sock',
+  //     key: '/home/Nginx/2_www.pengji.xyz.key',
+  //     cert: '/home/Nginx/1_www.pengji.xyz_bundle.crt'
+  //   },
+  // };
 
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',
-    middleware: ["errorHandler"],
+    middleware: [ 'errorHandler' ],
     errorHandler: {
-      match: "/user"
-    }
+      match: '/user',
+    },
   };
 
   return {
