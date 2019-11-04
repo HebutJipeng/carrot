@@ -12,7 +12,7 @@ import Component from "vue-class-component";
 export default class About extends Vue {
   greet: string = "This is an about page";
   mounted() {
-    console.log(123);
+    // console.log(123);
   }
 }
 </script>

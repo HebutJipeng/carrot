@@ -11,6 +11,7 @@ module.exports = appInfo => {
    * @type {Egg.EggAppConfig}
    **/
   const config = (exports = {});
+  const path = require('path')
 
   // use for cookie sign key, should change to your own and keep security
   config.keys = appInfo.name + '_1570720155049_2226';
@@ -43,6 +44,9 @@ module.exports = appInfo => {
         useNewUrlParser: true,
       },
     },
+  };
+  config.static = {
+    dir: path.join(appInfo.baseDir, "app/public/web/")
   };
 
   // config.cluster = {

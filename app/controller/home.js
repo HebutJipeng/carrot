@@ -1,6 +1,8 @@
 'use strict';
 
 const Controller = require('egg').Controller;
+const path = require('path')
+const fs = require('fs')
 
 class HomeController extends Controller {
   async index() {
@@ -44,6 +46,23 @@ class HomeController extends Controller {
     await this.ctx.render('index', {
       title
     })
+  }
+
+  read(dir) {
+    return new Promise((resolve,reject)=>{
+        fs.readFile(dir,'utf-8',(err,data)=>{
+            if(err){
+                reject(err)
+            }else{
+                resolve(data)
+            }
+        })
+    })
+  }
+
+  async web() {
+    const tpl = path.join(this.config.static.dir, "index.html");
+    this.ctx.body = await this.read(tpl);
   }
 }
 
