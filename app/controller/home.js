@@ -1,8 +1,8 @@
 'use strict';
 
 const Controller = require('egg').Controller;
-const path = require('path')
-const fs = require('fs')
+const path = require('path');
+const fs = require('fs');
 
 class HomeController extends Controller {
   async index() {
@@ -27,42 +27,33 @@ class HomeController extends Controller {
   }
 
   async create() {
-    const { ctx } = this
+    const { ctx } = this;
     const userRule = {
-      name: { type: "string" },
-      mobile: { type: "string" },
-      company: { type: "string" },
-      area: { type: "string" },
-      industry: { type: "string", required: false }
+      name: { type: 'string' },
+      mobile: { type: 'string' },
+      company: { type: 'string' },
+      area: { type: 'string' },
+      industry: { type: 'string', required: false },
     };
     ctx.validate(userRule, ctx.request.body);
-    const res = await this.ctx.service.user.add(ctx.request.body)
-    const res_pic = await ctx.service.user.getUserCard(ctx.request.body)
-    ctx.helper.success({ ctx, res: res_pic })
+    const res = await this.ctx.service.user.add(ctx.request.body);
+    const res_pic = await ctx.service.user.getUserCard(ctx.request.body);
+    ctx.helper.success({ ctx, res: res_pic });
   }
 
   async form() {
-    const title = 'AI视界 享未来'
+    const title = 'AI视界 享未来';
     await this.ctx.render('index', {
-      title
-    })
+      title,
+    });
   }
 
-  read(dir) {
-    return new Promise((resolve,reject)=>{
-        fs.readFile(dir,'utf-8',(err,data)=>{
-            if(err){
-                reject(err)
-            }else{
-                resolve(data)
-            }
-        })
-    })
-  }
-
-  async web() {
-    const tpl = path.join(this.config.static.dir, "index.html");
-    this.ctx.body = await this.read(tpl);
+  async staticPage() {
+    const { ctx } = this;
+    ctx.response.type = 'html';
+    ctx.body = fs.readFileSync(
+      path.resolve(__dirname, '../public/dist/index.html')
+    );
   }
 }
 

@@ -15,7 +15,8 @@
     "egg-scripts": "^2.11.0",
     "egg-security": "^2.5.0",
     "egg-validate": "^2.0.2",
-    "egg-view-nunjucks": "^2.2.0"
+    "egg-view-nunjucks": "^2.2.0",
+    "egg-view-static": "^1.0.0"
   },
   "devDependencies": {
     "autod": "^3.0.1",
@@ -30,7 +31,7 @@
     "node": ">=10.0.0"
   },
   "scripts": {
-    "start": "egg-scripts start --port=80 --daemon --title=egg-server-carrot",
+    "start": "egg-scripts start --port=7001 --daemon --title=egg-server-carrot",
     "stop": "egg-scripts stop --title=egg-server-carrot",
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",

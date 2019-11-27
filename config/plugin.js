@@ -20,6 +20,10 @@ module.exports = {
   },
   nunjucks: {
     enable: true,
-    package: 'egg-view-nunjucks'
-  }
+    package: 'egg-view-nunjucks',
+  },
+  viewStatic: {
+    enable: true,
+    package: 'egg-view-static',
+  },
 };

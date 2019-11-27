@@ -1,6 +1,7 @@
 /* eslint valid-jsdoc: "off" */
 
-'use strict';
+('use strict');
+const path = require('path');
 
 /**
  * @param {Egg.EggAppInfo} appInfo app info
@@ -30,12 +31,12 @@ module.exports = appInfo => {
     },
   };
 
-  config.view = {
-    defaultViewEngine: 'nunjucks',
-    mapping: {
-      '.html': 'nunjucks', // 左边写成.html后缀，会自动渲染.html文件
-    },
-  };
+  // config.view = {
+  //   defaultViewEngine: 'nunjucks',
+  //   mapping: {
+  //     '.html': 'nunjucks', // 左边写成.html后缀，会自动渲染.html文件
+  //   },
+  // };
 
   config.mongoose = {
     client: {
@@ -49,15 +50,19 @@ module.exports = appInfo => {
     dir: path.join(appInfo.baseDir, "app/public/web/")
   };
 
-  // config.cluster = {
-  //   listen: {
-  //     port: 80,
-  //     hostname: '127.0.0.1', // 不建议设置 hostname 为 '0.0.0.0'，它将允许来自外部网络和来源的连接，请在知晓风险的情况下使用
-  //     // path: '/var/run/egg.sock',
-  //     // key: '/home/Nginx/2_www.pengji.xyz.key',
-  //     // cert: '/home/Nginx/1_www.pengji.xyz_bundle.crt',
-  //   },
-  // };
+  config.view = {
+    defaultViewEngine: 'static',
+    mapping: {
+      '.html': 'static',
+    },
+  };
+
+  config.static = {
+    prefix: '/public',
+    dir: path.join(appInfo.baseDir, 'app/public/dist'),
+    dynamic: true,
+    maxAge: 31536000,
+  };
 
   // add your user config here
   const userConfig = {
