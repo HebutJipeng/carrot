@@ -1,7 +1,7 @@
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const IS_PROD = process.env.NODE_ENV === "production";
 module.exports = {
-  publicPath: IS_PROD ? "/public" : "/",
+  publicPath: "/",
   outputDir: "../app/public/dist",
   // assetsDir: "",
   // assetsPublicPath: "/public",

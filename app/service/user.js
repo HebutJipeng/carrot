@@ -1,9 +1,9 @@
-"use strict";
+'use strict';
 
-const Service = require("egg").Service;
+const Service = require('egg').Service;
 
-const province = require("../static/province")
-const industry = require("../static/industry")
+const province = require('../static/province');
+const industry = require('../static/industry');
 class UserService extends Service {
   // 更新用户信息
   async add(data) {
@@ -13,14 +13,14 @@ class UserService extends Service {
   }
 
   async getUserCard(data) {
-    let result = []
+    let result = [];
     if (data.area) {
       const area = province
         .find(item => item.key === data.area)
         .pic.map(
           item => `https://h5-1254352970.cos.ap-beijing.myqcloud.com/${item}.jpg`
         );
-      result = [...area]
+      result = [ ...area ];
     }
     if (data.industry) {
       const ind = industry
@@ -29,10 +29,10 @@ class UserService extends Service {
           item =>
             `https://h5-1254352970.cos.ap-beijing.myqcloud.com/${item}.jpg`
         );
-      result = [...result, ...ind];
+      result = [ ...result, ...ind ];
     }
-    console.log(result)
-    return result
+    console.log(result);
+    return result;
   }
 }
 module.exports = UserService;

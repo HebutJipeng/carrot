@@ -9,5 +9,6 @@ module.exports = app => {
   router.get('/testadd', controller.home.testAdd);
   router.post('/user/create', controller.home.create);
   router.get('/form', controller.home.form);
+  router.get('/testfetch', controller.home.testfetch);
   router.get('/*', controller.home.staticPage);
 };

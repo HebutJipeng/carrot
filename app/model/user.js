@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 module.exports = app => {
   const mongoose = app.mongoose;
@@ -7,23 +7,23 @@ module.exports = app => {
   const UserSchema = new Schema({
     name: {
       type: String,
-      required: true
+      required: true,
     },
     mobile: {
       type: String,
-      required: true
+      required: true,
     },
     company: {
       type: String,
-      required: true
+      required: true,
     },
     area: {
       type: String,
-      required: true
+      required: true,
     },
     industry: {
-      type: String
-    }
+      type: String,
+    },
   });
-  return mongoose.model("User", UserSchema);
+  return mongoose.model('User', UserSchema);
 };

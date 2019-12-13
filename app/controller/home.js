@@ -36,7 +36,7 @@ class HomeController extends Controller {
       industry: { type: 'string', required: false },
     };
     ctx.validate(userRule, ctx.request.body);
-    const res = await this.ctx.service.user.add(ctx.request.body);
+    await this.ctx.service.user.add(ctx.request.body);
     const res_pic = await ctx.service.user.getUserCard(ctx.request.body);
     ctx.helper.success({ ctx, res: res_pic });
   }
@@ -54,6 +54,10 @@ class HomeController extends Controller {
     ctx.body = fs.readFileSync(
       path.resolve(__dirname, '../public/dist/index.html')
     );
+  }
+
+  async testfetch() {
+    await this.ctx.service.game.fetchPage();
   }
 }
 
