@@ -23,7 +23,7 @@ export default class Lottie extends Vue {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .lottie {
   position: absolute;
   top: 0;
@@ -31,6 +31,7 @@ export default class Lottie extends Vue {
   bottom: 0;
   left: 0;
   margin: 0 auto;
-  max-width: 200px;
+  width: 100%;
+  max-width: 500px;
 }
 </style>
