@@ -12,8 +12,9 @@ class GameService extends Service {
     //   const URLS_L = URLS.length;
       URLS.forEach(async item => {
         const res = await ctx.curl(`${BASE_URL}${item.path}.html`, {
-          method: 'GET',
+          method: "GET",
           headers: requestHeader,
+          dataType: "text"
         });
         console.log(res.data);
       });
