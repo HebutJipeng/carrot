@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <div id="lottie" class="lottie"></div>
-  </div>
+  <div id="lottie" class="lottie"></div>
 </template>
 
 <script lang="ts">
@@ -22,16 +20,3 @@ export default class Lottie extends Vue {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.lottie {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 500px;
-}
-</style>

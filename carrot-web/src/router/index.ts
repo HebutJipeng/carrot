@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 const Lottie = () =>
   import(/* webpackChunkName: "Lottie" */ "../views/Lottie.vue");
+const Game = () => import(/* webpackChunkName: "Game" */ "../views/Game.vue");
 
 Vue.use(VueRouter);
 
@@ -10,9 +11,7 @@ const routes = [
   {
     path: "/",
     name: "home",
-    redirect: {
-      name: "lottie"
-    }
+    component: Home
   },
   {
     path: "/about",
@@ -27,6 +26,11 @@ const routes = [
     path: "/lottie",
     name: "lottie",
     component: Lottie
+  },
+  {
+    path: "/game",
+    name: "game",
+    component: Game
   }
 ];
 
