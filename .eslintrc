@@ -1,3 +1,6 @@
 {
+  "rules": {
+    "arrow-parens": "off"
+  },
   "extends": "eslint-config-egg"
 }

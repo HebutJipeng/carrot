@@ -15,5 +15,5 @@ module.exports = app => {
       type: Object,
     },
   });
-  return mongoose.model('Game', GameInfoSchema);
+  return mongoose.model('Data', GameInfoSchema);
 };

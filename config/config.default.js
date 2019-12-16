@@ -39,8 +39,8 @@ module.exports = appInfo => {
 
   config.mongoose = {
     client: {
-      // url: 'mongodb://140.143.193.74:27017/tiandy',
-      url: 'mongodb://127.0.0.1:27017/game',
+      url: 'mongodb://140.143.193.74:27017/game',
+      // url: 'mongodb://127.0.0.1:27017/game',
       options: {
         useNewUrlParser: true,
       },
@@ -62,6 +62,12 @@ module.exports = appInfo => {
     dir: path.join(appInfo.baseDir, 'app/public/dist'),
     dynamic: true,
     maxAge: 31536000,
+  };
+
+  config.httpclient = {
+    httpAgent: {
+      timeout: 63000,
+    },
   };
 
   // add your user config here

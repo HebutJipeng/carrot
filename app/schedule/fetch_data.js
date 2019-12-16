@@ -5,15 +5,13 @@ const Subscription = require('egg').Subscription;
 class FetchData extends Subscription {
   static get schedule() {
     return {
-      interval: '5s',
+      interval: '1h',
       type: 'all',
-      disable: true,
     };
   }
   async subscribe() {
-    console.log('trigger');
     const { ctx } = this;
-    console.log(await ctx.model.GameUpdateTime);
+    await ctx.service.game.fetchPage();
   }
 }
 

@@ -8,5 +8,5 @@ module.exports = app => {
     type: { type: String }, // 表类型
     updateTime: { type: Date },
   });
-  return mongoose.model('Data', GameUpdateTimeSchema);
+  return mongoose.model('Game', GameUpdateTimeSchema);
 };
