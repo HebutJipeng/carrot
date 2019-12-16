@@ -43,5 +43,12 @@ module.exports = {
       type: 'hot_chinese_history',
     },
   ],
+  typeMap: {
+    steam: 'Steam 最新折扣',
+    hot: '热门游戏折扣',
+    hot_chinese: '热门中文游戏折扣',
+    hot_history: '热门游戏历史低价',
+    hot_chinese_history: '中文游戏历史低价',
+  },
 };
 

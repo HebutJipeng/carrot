@@ -2,7 +2,7 @@
 'use strict';
 
 const Service = require('egg').Service;
-const { BASE_URL, requestHeader, URLS } = require('../static/game_static');
+const { BASE_URL, requestHeader, URLS, typeMap } = require('../static/game_static');
 const cheerio = require('cheerio');
 
 
@@ -50,7 +50,6 @@ class GameService extends Service {
   async parseHtml(text, name) {
     return new Promise((resolve, reject) => {
       try {
-        // const text = fs.readFileSync('./doc/1c.html', 'utf-8')
         const $ = cheerio.load(text);
 
         const gameInfo = $('.table.yxInfo');
@@ -182,6 +181,15 @@ class GameService extends Service {
       }
 
     });
+  }
+
+  async getGame(type) {
+    const { ctx } = this;
+    // 查某个类型最新一条
+    const res = ctx.model.GameInfo.findOne({
+      name: typeMap[type],
+    }).limit(1).sort({ $natural: -1 });
+    return res;
   }
 }
 

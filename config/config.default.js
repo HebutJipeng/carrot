@@ -70,6 +70,11 @@ module.exports = appInfo => {
     },
   };
 
+  exports.validate = {
+    enable: true,
+    package: 'egg-validate',
+  };
+
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',

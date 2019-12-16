@@ -10,5 +10,9 @@ module.exports = app => {
   router.post('/user/create', controller.home.create);
   router.get('/form', controller.home.form);
   router.get('/testfetch', controller.home.testfetch);
+
+  // game api
+  router.resources('game', '/game', controller.game);
+
   router.get('/*', controller.home.staticPage);
 };
