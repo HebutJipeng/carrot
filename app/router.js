@@ -12,7 +12,7 @@ module.exports = app => {
   router.get('/testfetch', controller.home.testfetch);
 
   // game api
-  router.resources('game', '/game', controller.game);
+  router.resources('game', '/api/game', controller.game);
 
   router.get('/*', controller.home.staticPage);
 };
