@@ -3,7 +3,9 @@
     <h1>Peng's Collection</h1>
     <ul>
       <li>
-        <router-link :to="{ name: 'game' }">List of discount games</router-link>
+        <router-link :to="{ path: '/game' }"
+          >List of discount games</router-link
+        >
       </li>
     </ul>
     <Lottie />
@@ -37,9 +39,11 @@ export default {
   flex-direction: column;
   justify-content: center;
   h1 {
+    margin: 32px 0;
     text-align: center;
   }
   ul {
+    margin: 16px 0;
     li {
       a {
         color: #584f60;

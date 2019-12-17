@@ -3,7 +3,12 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 const Lottie = () =>
   import(/* webpackChunkName: "Lottie" */ "../views/Lottie.vue");
+
 const Game = () => import(/* webpackChunkName: "Game" */ "../views/Game.vue");
+const GameList = () =>
+  import(/* webpackChunkName: "Game" */ "../views/GameList.vue");
+const GameHome = () =>
+  import(/* webpackChunkName: "Game" */ "../views/GameHome.vue");
 
 Vue.use(VueRouter);
 
@@ -30,7 +35,17 @@ const routes = [
   {
     path: "/game",
     name: "game",
-    component: Game
+    component: Game,
+    children: [
+      {
+        path: "list",
+        component: GameList
+      },
+      {
+        path: "",
+        component: GameHome
+      }
+    ]
   }
 ];
 
