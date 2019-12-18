@@ -34,13 +34,6 @@ module.exports = {
           }
         })
       ]);
-
-      // 多核启动编译及内存提升
-      const data = config.plugins[8];
-      // 进程数量
-      data.workersNumber = os.cpus().length > 4 ? 4 : os.cpus().length; // 会占用额外内存不释放，不建议开发阶段使用
-      // 单个进程最大使用内存
-      data.memoryLimit = 1024;
     }
   }
 };
