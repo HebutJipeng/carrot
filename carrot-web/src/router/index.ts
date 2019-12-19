@@ -6,9 +6,9 @@ const Lottie = () =>
 
 const Game = () => import(/* webpackChunkName: "Game" */ "../views/Game.vue");
 const GameList = () =>
-  import(/* webpackChunkName: "Game" */ "../views/GameList.vue");
+  import(/* webpackChunkName: "GameList" */ "../views/GameList.vue");
 const GameHome = () =>
-  import(/* webpackChunkName: "Game" */ "../views/GameHome.vue");
+  import(/* webpackChunkName: "GameHome" */ "../views/GameHome.vue");
 
 Vue.use(VueRouter);
 

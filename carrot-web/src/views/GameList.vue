@@ -5,7 +5,10 @@
       v-for="(item, index) in gameList"
       :key="index"
     >
-      <div class="card-wrapper">
+      <div 
+        class="card-wrapper" 
+        @click="showHandle(index)"
+      >
         <div
           class="img"
           v-lazy:background-image="replaceImgs(item.picture)"
@@ -38,7 +41,7 @@
 
           <div class="rate">
             <span class="title">{{ item.discount_info[0] }}折扣</span>
-            <span class="text">{{ item.discount_info[2] }}</span>
+            <span class="text" :style="computedStyle(item.discount_info[2])">{{ item.discount_info[2] }}</span>
           </div>
 
           <div class="rate-num">
@@ -46,6 +49,24 @@
           </div>
         </div>
       </div>
+      <el-collapse-transition>
+        <div class="extra-wrapper" v-if="show[index]">
+          <div v-if="item.platforms.steam" class="game-li">
+            <div class="text-left">
+              <p class="game-li-title"><a :href="item.platforms.steam.source" target="_blank">{{ item.platforms.steam.name}}</a></p>
+              <p>{{item.platforms.steam.display_text}}</p>
+              <p>{{item.platforms.steam.sales_date}}</p>
+            </div>
+            <div class="text-right">
+              <p class="game-li-original">{{item.platforms.steam.original_price}}</p>
+              <p>{{item.platforms.steam.price}}</p>
+              <p>{{item.platforms.steam.sales_text}}</p>
+            </div>
+          </div>
+          <div></div>
+          <div></div>
+        </div>
+      </el-collapse-transition>
     </el-card>
   </div>
 </template>
@@ -65,6 +86,7 @@ import lottie from "lottie-web";
 export default class GameList extends Vue {
   private gameList: [] = [];
   private title: string = "";
+  private show = {};
 
   @Emit()
   updateTitle() {
@@ -90,6 +112,7 @@ export default class GameList extends Vue {
   async fetchList() {
     const res = await this.$axios.get(`/api/game/${ this.type }`);
     if (!res.code) {
+      this.show = {};
       this.gameList = res.data.data;
       this.title = res.data.name;
     }
@@ -102,6 +125,28 @@ export default class GameList extends Vue {
     } else {
       this.$message.warning('当前游戏不可跳转')
     }
+  }
+
+  computedStyle(text) {
+    if (text.indexOf('打破') > -1) {
+      return {
+        color: 'yellow',
+        'font-weight': 'bold'
+      }
+    } else if (text.indexOf('未达') > -1) {
+      return {
+        color: '#eee'
+      }
+    } else {
+      return {
+        color: '#fff',
+        'font-weight': 'bold'
+      }
+    }
+  }
+
+  showHandle(idx) {
+    this.$set(this.show, idx, !this.show[idx])
   }
 }
 </script>
@@ -146,6 +191,7 @@ export default class GameList extends Vue {
       padding: 16px;
       display: flex;
       flex-direction: column;
+      overflow: hidden;
       h2 {
         overflow: hidden;
         text-overflow: ellipsis;
@@ -199,6 +245,30 @@ export default class GameList extends Vue {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+      }
+    }
+  }
+
+  .extra-wrapper {
+    font-size: 14px;
+    background: #eee;
+    padding: 8px;
+    box-shadow: inset 0px 5px 8px 1px hsla(0, 0%, 0%, 0.13);
+    .game-li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .text-left {
+        text-align: left;
+      }
+      .text-right {
+        text-align: right;
+      }
+      p {
+        margin: 4px;
+      }
+      .game-li-title {
+        
       }
     }
   }
