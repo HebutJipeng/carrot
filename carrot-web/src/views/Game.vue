@@ -1,6 +1,6 @@
 <template>
   <el-container style="min-height: 100vh;">
-    <el-card class="box-card">
+    <el-card class="box-card game-wrapper">
       <div slot="header" class="clearfix">
         <span style="font-weight: bold;">{{ cardTitle }}</span>
 
@@ -24,11 +24,28 @@
   </el-container>
 </template>
 
+<style lang="scss">
+@media (max-width: 600px) {
+  .game-wrapper {
+    .el-card__body {
+      padding: 16px 8px;
+    }
+  }
+}
+</style>
+
 <style lang="scss" scoped>
 .box-card {
   width: 100%;
   max-width: 800px;
   margin: 30px auto;
+}
+
+@media (max-width: 600px) {
+  .box-card {
+    margin: 0 auto;
+    border: none;
+  }
 }
 </style>
 

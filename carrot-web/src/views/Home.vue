@@ -3,7 +3,7 @@
     <h1>Peng's Collection</h1>
     <ul>
       <li>
-        <router-link :to="{ path: '/game' }"
+        <router-link :to="{ path: '/game/list' }"
           >List of discount games</router-link
         >
       </li>

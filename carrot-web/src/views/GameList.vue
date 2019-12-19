@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="game-list">
     <el-card
       class="box-card game-card"
       v-for="(item, index) in gameList"
@@ -11,7 +11,7 @@
           v-lazy:background-image="replaceImgs(item.picture)"
         ></div>
         <div class="info">
-          <h2>
+          <h2 @click="jumpSteam(item)">
             <span v-for="(it, idx) in item.title" :key="it">
               <span v-if="it && idx">·</span>
               <span>{{ it }}</span>
@@ -32,7 +32,7 @@
               size="mini"
               v-if="item.product_info.commentRate"
               type="info"
-              >{{ item.product_info.commentRate }}</el-tag
+              >好评率: {{ item.product_info.commentRate }}</el-tag
             >
           </div>
 
@@ -94,6 +94,15 @@ export default class GameList extends Vue {
       this.title = res.data.name;
     }
   }
+
+  jumpSteam(item) {
+    const src = item.platforms.steam ? item.platforms.steam.source : ''
+    if (src) {
+      window.open(src)
+    } else {
+      this.$message.warning('当前游戏不可跳转')
+    }
+  }
 }
 </script>
 
@@ -103,6 +112,7 @@ export default class GameList extends Vue {
     padding: 0;
   }
 }
+
 </style>
 
 <style lang="scss" scoped>
@@ -115,6 +125,7 @@ export default class GameList extends Vue {
   h2 {
     font-size: 16px;
     margin: 0;
+    cursor: pointer;
   }
 
   .card-wrapper {
@@ -138,7 +149,7 @@ export default class GameList extends Vue {
       h2 {
         overflow: hidden;
         text-overflow: ellipsis;
-        white-space: nowrap;
+        // white-space: nowrap;
       }
       .tag-list {
         font-size: 14px;
@@ -171,7 +182,7 @@ export default class GameList extends Vue {
         }
         .title {
           display: block;
-          font-size: 16px;
+          font-size: 14px;
           font-weight: bold;
         }
         .text {
