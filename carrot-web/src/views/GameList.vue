@@ -14,7 +14,7 @@
           v-lazy:background-image="replaceImgs(item.picture)"
         ></div>
         <div class="info">
-          <h2 @click="jumpSteam(item)">
+          <h2>
             <span v-for="(it, idx) in item.title" :key="it">
               <span v-if="it && idx">·</span>
               <span>{{ it }}</span>
@@ -63,8 +63,28 @@
               <p>{{item.platforms.steam.sales_text}}</p>
             </div>
           </div>
-          <div></div>
-          <div></div>
+          <div v-if="item.platforms.shanguo" class="game-li">
+            <div class="text-left">
+              <p class="game-li-title"><a :href="item.platforms.shanguo.source" target="_blank">{{ item.platforms.shanguo.name}}</a></p>
+              <p>{{item.platforms.shanguo.display_text}}</p>
+              <p>{{item.platforms.shanguo.sales_date}}</p>
+            </div>
+            <div class="text-right">
+              <p class="game-li-original">{{item.platforms.shanguo.original_price}}</p>
+              <p>{{item.platforms.shanguo.price}}</p>
+              <p>{{item.platforms.shanguo.sales_text}}</p>
+            </div>
+          </div>
+          <div v-if="item.platforms.other" class="game-li">
+            <div class="text-left">
+              <p class="game-li-title"><a>{{ item.platforms.other.name }}</a></p>
+              <p v-for="(it, i) in item.platforms.other.items" :key="i">{{ it.title }}</p>
+            </div>
+            <div class="text-right">
+              <p class="game-li-original">&nbsp;</p>
+              <p v-for="(it, i) in item.platforms.other.items" :key="i">{{ it.price }}</p>
+            </div>
+          </div>
         </div>
       </el-collapse-transition>
     </el-card>
@@ -266,10 +286,23 @@ export default class GameList extends Vue {
       }
       p {
         margin: 4px;
+        &.game-li-title a {
+          text-decoration: none;
+          font-weight: bolder;
+          color: #213f59;
+          font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        }
+        &.game-li-original {
+          line-height: 1;
+          height: 20px;
+          text-decoration: line-through;
+          color: #999;
+        }
       }
-      .game-li-title {
-        
-      }
+    }
+
+    .game-li:not(:last-child) {
+      border-bottom: 1px solid #d8d6d6;
     }
   }
 }
