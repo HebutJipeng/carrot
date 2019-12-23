@@ -1,5 +1,9 @@
 # carrot
 
+## 内容
+- 整体为 Egg.js + Vue + TS 的项目实践；
+- 目前实现了 基于 Steam 打折爬虫Egg的爬虫以及展示；
+- /Serverless 部分为基于腾讯云 Serverless 的爬虫实践；
 
 
 ## QuickStart

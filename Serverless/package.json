@@ -1,0 +1,20 @@
+{
+  "name": "webhooktimer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "async-request": "^1.2.0",
+    "cheerio": "^1.0.0-rc.3",
+    "koa": "^2.11.0",
+    "koa-router": "^7.4.0",
+    "mongoose": "^5.7.13",
+    "serverless-http": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

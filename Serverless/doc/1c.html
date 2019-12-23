@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="True" name="HandheldFriendly" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Steam 热门中文游戏折扣_Steam 折扣_Steam 打折_游戏打折情报</title>
+    <!-- ICON -->
+    <link rel="shortcut icon" href="./Others/ICON.ico">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/CustStyle.css" />
+</head>
+
+<body>
+    <!-- JS Files -->
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/loadImage.js"></script>
+    <script>
+        $( document ).ready(initialize_counter)
+
+        function z(n) { return (n < 10 ? '0' : '') + n; }
+
+        function initialize_counter(){
+            var timer;
+            var compareDate = new Date("2016-07-20T01:00:00Z");
+
+            timer = setInterval(function () {
+                timeBetweenDates(compareDate);
+            }, 1000);
+        }
+        function timeBetweenDates(toDate) {
+            var dateEntered = toDate;
+            var now = new Date();
+            var difference = dateEntered.getTime() - now.getTime();
+
+            if (difference <= 0) {
+                // Timer done
+                clearInterval(timer);
+            } else {
+
+                var seconds = Math.floor(difference / 1000);
+                var minutes = Math.floor(seconds / 60);
+                var hours = Math.floor(minutes / 60);
+                var days = Math.floor(hours / 24);
+
+                hours %= 24;
+                minutes %= 60;
+                seconds %= 60;
+
+                $("#days").text(days);
+                $("#hours").text(hours);
+                $("#minutes").text(minutes);
+                $("#seconds").text(seconds);
+            }
+        }
+    </script>
+    <div id="custNav"></div>
+    <!--------------------------------------- Main Content ------------------------------------------------>
+    <div class="container">
+        <div class="content_main">
+            <div class="cell_noborder"><b>* 讨论和询问打折话题，请访问微博 <a id="urlhref" href="http://www.weibo.com/yxdzqb" target="_blank"> <b>@游戏打折情报</b></a></b></div>
+            <div class="cell_noborder"><b>* 查询详细价格用微信搜索 "游戏打折情报" 或 yxdzqb</b></div>
+            <div id="Leftbar"></div>
+            <div id="Rightbar">
+                <div class="sep20"></div>
+                <div class="box"></div>
+            </div>
+            <div id="Main_content">
+                <div class="sep20"></div>
+                <div class="box">
+                    <div class="btn-group btn-group-xs btn-group-justified" role="group">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default dropdown-toggle btn-xs yxInfo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Steam 游戏折扣 <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu btn-xs yxInfo">
+                                <li><a href="index_r.html">Steam 最新折扣</a></li>
+                                <li><a href="index1.html">热门游戏折扣</a></li>
+                                <li><a href="index_1c.html">热门中文游戏折扣</a></li>
+                                <li><a href="index2.html">热门游戏历史低价</a></li>
+                                <li><a href="index_2c.html">中文游戏历史低价</a></li>
+                                <!--<li role="separator" class="divider"></li>-->
+                            </ul>
+                        </div>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default dropdown-toggle btn-xs yxInfo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                慈善包 <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu btn-xs yxInfo">
+                                <li><a href="hb_index.html">Humble Bundle</a></li>
+                                <!--<li role="separator" class="divider"></li>-->
+                            </ul>
+                        </div>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default btn-xs yxInfo" onclick="window.location.href='index3.html'">杉果游戏</button>
+                        </div>
+                    </div>
+                    <div class="sep5"></div>
+                    <table class="table yxInfo table-striped">
+                        <caption class="btn-danger"><span>&nbsp;&nbsp;&nbsp;<b>中文热门游戏折扣合集</b></span>&nbsp; &nbsp;<span>更新时间：2019-12-08 09:28</span></caption>
+                        <tbody>
+                            <tr class="bg-none">
+                                <td>
+                                    <div role="button" data-toggle="collapse" data-target="#collapse_target_1" aria-expanded="false" aria-controls="collapse_target_1">
+                                        <table width="100%">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="left" width="auto"><span><b>Titan Quest Anniversary Edition</b></span><br /><span>泰坦之旅 十周年纪念版</span></td>
+                                                    <td align="right"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="sep3"></div>
+                                        <table class="cell_tabs" role="button" data-toggle="collapse" data-target="#collapse_target_1" aria-expanded="false" aria-controls="collapse_target_1">
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top" align="center" width="100"><img src="https://media.st.dl.bscstorage.net/steam/apps/475150/capsule_184x69.jpg" class="img_in_tab"></td>
+                                                    <td width="10"></td>
+                                                    <td align="left" width="auto"><span><img src="./Others/Steam_icon_small.png" />&nbsp;92%</span></td>
+                                                    <td align="right"><span class="cell_price">-81%&nbsp;<b>￥15</b></span>
+                                                        <div class="sep2"></div><span class="cell_price">持平历史低价</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="collapse" id="collapse_target_1">
+                                            <div class="sep5"></div><span>上市日期：2016-09-01</span>
+                                            <div class="sep1"></div><span>社区评价数超过七千 好评率 92%</span>
+                                            <div class="sep3"></div>
+                                            <table class="cell_tabs">
+                                                <tbody>
+                                                    <tr>
+                                                        <td><a href="https://store.steampowered.com/app/475150/" target="_blank"><b>Steam 平台</b></a>：</td>
+                                                        <td class="td_right_detail"><span class="cell_price td_strike ">￥79</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" width="auto">历史低价：<b>￥15</b></td>
+                                                        <td class="td_right_detail" width="140">
+                                                            <div class="cell_price"><span>-81%</span> &nbsp;<span>￥15</span></div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>历史低价日期：2017-02-10</td>
+                                                        <td class="td_right_detail" width="100"><span class="cell_price">持平 Steam 低价</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="sep5"></div><a href="http://www.sonkwo.hk/products/305?game_id=345" target="_blank"><b>杉果游戏</b></a>：
+                                                        </td>
+                                                        <td class="td_right_detail">
+                                                            <div class="sep5"></div><span class="cell_price td_strike td_no_visible">￥79</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" width="auto">历史低价：<b>￥15</b></td>
+                                                        <td class="td_right_detail" width="100">
+                                                            <div class="cell_price"><span></span> &nbsp;<span>￥79</span></div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>历史低价日期：2019-07-21</td>
+                                                        <td class="td_right_detail" width="100"><span class="cell_price">当前没有折扣</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                </td>
+                            </tr>
+                            <tr class="bg-none">
+                                <td>
+                                    <div role="button" data-toggle="collapse" data-target="#collapse_target_2" aria-expanded="false" aria-controls="collapse_target_2">
+                                        <table width="100%">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="left" width="auto"><span><b>Devil May Cry HD Collection</b></span><br /><span>鬼泣 高清合集</span></td>
+                                                    <td align="right"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="sep3"></div>
+                                        <table class="cell_tabs" role="button" data-toggle="collapse" data-target="#collapse_target_2" aria-expanded="false" aria-controls="collapse_target_2">
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top" align="center" width="100"><img src="https://media.st.dl.bscstorage.net/steam/apps/631510/capsule_184x69.jpg" class="img_in_tab"></td>
+                                                    <td width="10"></td>
+                                                    <td align="left" width="auto"><span><img src="./Others/Steam_icon_small.png" />&nbsp;84%</span></td>
+                                                    <td align="right"><span class="cell_price">-30%&nbsp;<b>￥113</b></span>
+                                                        <div class="sep2"></div><span class="cell_price">
+                                                            <font color="#808080">未达历史低价</font>
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="collapse" id="collapse_target_2">
+                                            <div class="sep5"></div><span>上市日期：2018-03-14</span>
+                                            <div class="sep1"></div><span>社区评价数超过三百 好评率 84%</span>
+                                            <div class="sep3"></div>
+                                            <table class="cell_tabs">
+                                                <tbody>
+                                                    <tr>
+                                                        <td><a href="https://store.steampowered.com/app/631510/" target="_blank"><b>Steam 平台</b></a>：</td>
+                                                        <td class="td_right_detail"><span class="cell_price td_strike td_no_visible">￥162</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" width="auto">历史低价：￥106</td>
+                                                        <td class="td_right_detail" width="140">
+                                                            <div class="cell_price"><span></span> &nbsp;<span>￥162</span></div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>历史低价日期：2018-10-30</td>
+                                                        <td class="td_right_detail" width="100"><span class="cell_price">当前没有折扣</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="sep5"></div><a href="http://www.sonkwo.hk/products/22?game_id=28" target="_blank"><b>杉果游戏</b></a>：
+                                                        </td>
+                                                        <td class="td_right_detail">
+                                                            <div class="sep5"></div><span class="cell_price td_strike ">￥162</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" width="auto">历史低价：<b>￥105</b></td>
+                                                        <td class="td_right_detail" width="100">
+                                                            <div class="cell_price"><span>-30%</span> &nbsp;<span>￥113</span></div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>历史低价日期：2019-09-27</td>
+                                                        <td class="td_right_detail" width="100"><span class="cell_price">未达历史低价</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                </td>
+                            </tr>
+                            <tr class="bg-none">
+                                <td>
+                                    <div role="button" data-toggle="collapse" data-target="#collapse_target_3" aria-expanded="false" aria-controls="collapse_target_3">
+                                        <table width="100%">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="left" width="auto"><span><b>Life is Strange 2</b></span><br /><span></span></td>
+                                                    <td align="right"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="sep3"></div>
+                                        <table class="cell_tabs" role="button" data-toggle="collapse" data-target="#collapse_target_3" aria-expanded="false" aria-controls="collapse_target_3">
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top" align="center" width="100"><img src="https://media.st.dl.bscstorage.net/steam/apps/532210/capsule_184x69.jpg" class="img_in_tab"></td>
+                                                    <td width="10"></td>
+                                                    <td align="left" width="auto"></td>
+                                                    <td align="right"><span class="cell_price">-76%&nbsp;<b>￥12</b></span>
+                                                        <div class="sep2"></div><span class="cell_price">持平历史低价</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="collapse" id="collapse_target_3">
+                                            <div class="sep5"></div><span>上市日期：2018-09-27</span>
+                                            <div class="sep1"></div>
+                                            <table class="cell_tabs">
+                                                <tbody>
+                                                    <tr>
+                                                        <td><a href="https://store.steampowered.com/app/532210/" target="_blank"><b>Steam 平台</b></a>：</td>
+                                                        <td class="td_right_detail"><span class="cell_price td_strike ">￥51</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" width="auto">历史低价：<b>￥12</b></td>
+                                                        <td class="td_right_detail" width="140">
+                                                            <div class="cell_price"><span>-76%</span> &nbsp;<span>￥12</span></div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>历史低价日期：2019-11-11</td>
+                                                        <td class="td_right_detail" width="100"><span class="cell_price">持平 Steam 低价</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                </td>
+                            </tr>
+                            <tr class="bg-none">
+                                <td>
+                                    <div role="button" data-toggle="collapse" data-target="#collapse_target_4" aria-expanded="false" aria-controls="collapse_target_4">
+                                        <table width="100%">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="left" width="auto"><span><b>游魂2-you're the only one-</b></span><br /><span></span></td>
+                                                    <td align="right"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="sep3"></div>
+                                        <table class="cell_tabs" role="button" data-toggle="collapse" data-target="#collapse_target_4" aria-expanded="false" aria-controls="collapse_target_4">
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top" align="center" width="100"><img src="https://media.st.dl.bscstorage.net/steam/apps/552280/capsule_184x69.jpg" class="img_in_tab"></td>
+                                                    <td width="10"></td>
+                                                    <td align="left" width="auto"><span><img src="./Others/Steam_icon_small.png" />&nbsp;98%</span></td>
+                                                    <td align="right"><span class="cell_price">-66%&nbsp;<b>￥40</b></span>
+                                                        <div class="sep2"></div><span class="cell_price">持平历史低价</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="collapse" id="collapse_target_4">
+                                            <div class="sep5"></div><span>上市日期：2016-12-09</span>
+                                            <div class="sep1"></div><span>社区评价数超过一千 好评率 98%</span>
+                                            <div class="sep3"></div>
+                                            <table class="cell_tabs">
+                                                <tbody>
+                                                    <tr>
+                                                        <td><a href="https://store.steampowered.com/app/552280/" target="_blank"><b>Steam 平台</b></a>：</td>
+                                                        <td class="td_right_detail"><span class="cell_price td_strike ">￥119</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" width="auto">历史低价：<b>￥40</b></td>
+                                                        <td class="td_right_detail" width="140">
+                                                            <div class="cell_price"><span>-66%</span> &nbsp;<span>￥40</span></div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>历史低价日期：2019-11-11</td>
+                                                        <td class="td_right_detail" width="100"><span class="cell_price">持平 Steam 低价</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                </td>
+                            </tr>
+                            <tr class="bg-none">
+                                <td>
+                                    <div role="button" data-toggle="collapse" data-target="#collapse_target_5" aria-expanded="false" aria-controls="collapse_target_5">
+                                        <table width="100%">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="left" width="auto"><span><b>Dead Rising 4</b></span><br /><span>丧尸围城4</span></td>
+                                                    <td align="right"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="sep3"></div>
+                                        <table class="cell_tabs" role="button" data-toggle="collapse" data-target="#collapse_target_5" aria-expanded="false" aria-controls="collapse_target_5">
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top" align="center" width="100"><img src="https://media.st.dl.bscstorage.net/steam/apps/543460/capsule_184x69.jpg" class="img_in_tab"></td>
+                                                    <td width="10"></td>
+                                                    <td align="left" width="auto"><span><img src="./Others/Metacritic_small.png" />&nbsp;<b>74</b></span>
+                                                        <div class="sep2"></div><span><img src="./Others/Steam_icon_small.png" />&nbsp;50%</span>
+                                                    </td>
+                                                    <td align="right"><span class="cell_price">-50%&nbsp;<b>￥81</b></span>
+                                                        <div class="sep2"></div><span class="cell_price">接近历史低价</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="collapse" id="collapse_target_5">
+                                            <div class="sep5"></div><span>上市日期：2017-03-15</span>
+                                            <div class="sep1"></div><span>社区评价数超过九百 好评率 50%</span>
+                                            <div class="sep3"></div>
+                                            <table class="cell_tabs">
+                                                <tbody>
+                                                    <tr>
+                                                        <td><a href="https://store.steampowered.com/app/543460/" target="_blank"><b>Steam 平台</b></a>：</td>
+                                                        <td class="td_right_detail"><span class="cell_price td_strike ">￥162</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" width="auto">历史低价：￥81</td>
+                                                        <td class="td_right_detail" width="140">
+                                                            <div class="cell_price"><span>-50%</span> &nbsp;<span>￥81</span></div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>历史低价日期：2019-04-26</td>
+                                                        <td class="td_right_detail" width="100"><span class="cell_price">持平 Steam 低价</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="sep5"></div><a href="http://www.sonkwo.hk/products/17?game_id=23" target="_blank"><b>杉果游戏</b></a>：
+                                                        </td>
+                                                        <td class="td_right_detail">
+                                                            <div class="sep5"></div><span class="cell_price td_strike ">￥159</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" width="auto">历史低价：<b>￥79</b></td>
+                                                        <td class="td_right_detail" width="100">
+                                                            <div class="cell_price"><span>-40%</span> &nbsp;<span>￥95</span></div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>历史低价日期：2019-04-28</td>
+                                                        <td class="td_right_detail" width="100"><span class="cell_price">未达历史低价</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                </td>
+                            </tr>
+                            <tr class="bg-none">
+                                <td>
+                                    <div role="button" data-toggle="collapse" data-target="#collapse_target_6" aria-expanded="false" aria-controls="collapse_target_6">
+                                        <table width="100%">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="left" width="auto"><span><b>Candleman: The Complete Journey</b></span><br /><span></span></td>
+                                                    <td align="right"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="sep3"></div>
+                                        <table class="cell_tabs" role="button" data-toggle="collapse" data-target="#collapse_target_6" aria-expanded="false" aria-controls="collapse_target_6">
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top" align="center" width="100"><img src="https://media.st.dl.bscstorage.net/steam/apps/591630/capsule_184x69.jpg" class="img_in_tab"></td>
+                                                    <td width="10"></td>
+                                                    <td align="left" width="auto"><span><img src="./Others/Metacritic_small.png" />&nbsp;<b>76</b></span>
+                                                        <div class="sep2"></div><span><img src="./Others/Steam_icon_small.png" />&nbsp;97%</span>
+                                                    </td>
+                                                    <td align="right"><span class="cell_price">-60%&nbsp;<b>￥19</b></span>
+                                                        <div class="sep2"></div><span class="cell_price">持平历史低价</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="collapse" id="collapse_target_6">
+                                            <div class="sep5"></div><span>上市日期：2018-02-01</span>
+                                            <div class="sep1"></div><span>社区评价数超过二百 好评率 97%</span>
+                                            <div class="sep3"></div>
+                                            <table class="cell_tabs">
+                                                <tbody>
+                                                    <tr>
+                                                        <td><a href="https://store.steampowered.com/app/591630/" target="_blank"><b>Steam 平台</b></a>：</td>
+                                                        <td class="td_right_detail"><span class="cell_price td_strike ">￥48</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" width="auto">历史低价：<b>￥19</b></td>
+                                                        <td class="td_right_detail" width="140">
+                                                            <div class="cell_price"><span>-60%</span> &nbsp;<span>￥19</span></div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>历史低价日期：2019-11-01</td>
+                                                        <td class="td_right_detail" width="100"><span class="cell_price">持平 Steam 低价</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                </td>
+                            </tr>
+                            <tr class="bg-none">
+                                <td>
+                                    <div role="button" data-toggle="collapse" data-target="#collapse_target_7" aria-expanded="false" aria-controls="collapse_target_7">
+                                        <table width="100%">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="left" width="auto"><span><b>Fate/EXTELLA</b></span><br /><span></span></td>
+                                                    <td align="right"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="sep3"></div>
+                                        <table class="cell_tabs" role="button" data-toggle="collapse" data-target="#collapse_target_7" aria-expanded="false" aria-controls="collapse_target_7">
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top" align="center" width="100"><img src="https://media.st.dl.bscstorage.net/steam/apps/511680/capsule_184x69.jpg" class="img_in_tab"></td>
+                                                    <td width="10"></td>
+                                                    <td align="left" width="auto"><span><img src="./Others/Steam_icon_small.png" />&nbsp;94%</span></td>
+                                                    <td align="right"><span class="cell_price">-50%&nbsp;<b>￥66</b></span>
+                                                        <div class="sep2"></div><span class="cell_price">持平历史低价</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="collapse" id="collapse_target_7">
+                                            <div class="sep5"></div><span>上市日期：2017-07-26</span>
+                                            <div class="sep1"></div><span>社区评价数超过二千 好评率 94%</span>
+                                            <div class="sep3"></div>
+                                            <table class="cell_tabs">
+                                                <tbody>
+                                                    <tr>
+                                                        <td><a href="https://store.steampowered.com/app/511680/" target="_blank"><b>Steam 平台</b></a>：</td>
+                                                        <td class="td_right_detail"><span class="cell_price td_strike ">￥133</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" width="auto">历史低价：<b>￥66</b></td>
+                                                        <td class="td_right_detail" width="140">
+                                                            <div class="cell_price"><span>-50%</span> &nbsp;<span>￥66</span></div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>历史低价日期：2019-03-17</td>
+                                                        <td class="td_right_detail" width="100"><span class="cell_price">持平 Steam 低价</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                </td>
+                            </tr>
+                            <tr class="bg-none">
+                                <td>
+                                    <div role="button" data-toggle="collapse" data-target="#collapse_target_8" aria-expanded="false" aria-controls="collapse_target_8">
+                                        <table width="100%">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="left" width="auto"><span><b>True Love ～Confide to the Maple～</b></span><br /><span>真恋~寄语枫秋~</span></td>
+                                                    <td align="right"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="sep3"></div>
+                                        <table class="cell_tabs" role="button" data-toggle="collapse" data-target="#collapse_target_8" aria-expanded="false" aria-controls="collapse_target_8">
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top" align="center" width="100"><img src="https://media.st.dl.bscstorage.net/steam/apps/495990/capsule_184x69.jpg" class="img_in_tab"></td>
+                                                    <td width="10"></td>
+                                                    <td align="left" width="auto"><span><img src="./Others/Steam_icon_small.png" />&nbsp;83%</span></td>
+                                                    <td align="right"><span class="cell_price">-51%&nbsp;<b>￥24</b></span>
+                                                        <div class="sep2"></div><span class="cell_price"><font color="#808080">未达历史低价</font></span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="collapse" id="collapse_target_8">
+                                            <div class="sep5"></div><span>上市日期：2016-10-05</span>
+                                            <div class="sep1"></div><span>社区评价数超过五百 好评率 83%</span>
+                                            <div class="sep3"></div>
+                                            <table class="cell_tabs">
+                                                <tbody>
+                                                    <tr>
+                                                        <td><a href="https://store.steampowered.com/app/495990/" target="_blank"><b>Steam 平台</b></a>：</td>
+                                                        <td class="td_right_detail"><span class="cell_price td_strike ">￥49</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" width="auto">历史低价：￥24</td>
+                                                        <td class="td_right_detail" width="140">
+                                                            <div class="cell_price"><span>-51%</span> &nbsp;<span>￥24</span></div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>历史低价日期：2017-12-22</td>
+                                                        <td class="td_right_detail" width="100"><span class="cell_price">持平 Steam 低价</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="sep5"></div><a href="http://www.sonkwo.com/products/2591?game_id=2591" target="_blank"><b>杉果游戏</b></a>：
+                                                        </td>
+                                                        <td class="td_right_detail">
+                                                            <div class="sep5"></div><span class="cell_price td_strike td_no_visible">￥45</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" width="auto">历史低价：<b>￥22</b></td>
+                                                        <td class="td_right_detail" width="100">
+                                                            <div class="cell_price"><span></span> &nbsp;<span>￥45</span></div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>历史低价日期：2019-02-06</td>
+                                                        <td class="td_right_detail" width="100"><span class="cell_price">当前没有折扣</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                </td>
+                            </tr>
+                            <tr class="bg-none">
+                                <td>
+                                    <div role="button" data-toggle="collapse" data-target="#collapse_target_9" aria-expanded="false" aria-controls="collapse_target_9">
+                                        <table width="100%">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="left" width="auto"><span><b>Haydee</b></span><br /><span></span></td>
+                                                    <td align="right"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="sep3"></div>
+                                        <table class="cell_tabs" role="button" data-toggle="collapse" data-target="#collapse_target_9" aria-expanded="false" aria-controls="collapse_target_9">
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top" align="center" width="100"><img src="https://media.st.dl.bscstorage.net/steam/apps/530890/capsule_184x69.jpg" class="img_in_tab"></td>
+                                                    <td width="10"></td>
+                                                    <td align="left" width="auto"><span><img src="./Others/Steam_icon_small.png" />&nbsp;87%</span></td>
+                                                    <td align="right"><span class="cell_price">-81%&nbsp;<b>￥9</b></span>
+                                                        <div class="sep2"></div><span class="cell_price">持平历史低价</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="collapse" id="collapse_target_9">
+                                            <div class="sep5"></div><span>上市日期：2016-09-26</span>
+                                            <div class="sep1"></div><span>社区评价数超过二千 好评率 87%</span>
+                                            <div class="sep3"></div>
+                                            <table class="cell_tabs">
+                                                <tbody>
+                                                    <tr>
+                                                        <td><a href="https://store.steampowered.com/app/530890/" target="_blank"><b>Steam 平台</b></a>：</td>
+                                                        <td class="td_right_detail"><span class="cell_price td_strike ">￥48</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" width="auto">历史低价：<b>￥9</b></td>
+                                                        <td class="td_right_detail" width="140">
+                                                            <div class="cell_price"><span>-81%</span> &nbsp;<span>￥9</span></div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>历史低价日期：2019-02-05</td>
+                                                        <td class="td_right_detail" width="100"><span class="cell_price">持平 Steam 低价</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                </td>
+                            </tr>
+                            <tr class="bg-none">
+                                <td>
+                                    <div role="button" data-toggle="collapse" data-target="#collapse_target_10" aria-expanded="false" aria-controls="collapse_target_10">
+                                        <table width="100%">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="left" width="auto"><span><b>The Crew™ 2</b></span><br /><span></span></td>
+                                                    <td align="right"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="sep3"></div>
+                                        <table class="cell_tabs" role="button" data-toggle="collapse" data-target="#collapse_target_10" aria-expanded="false" aria-controls="collapse_target_10">
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top" align="center" width="100"><img src="https://media.st.dl.bscstorage.net/steam/apps/646910/capsule_184x69.jpg" class="img_in_tab"></td>
+                                                    <td width="10"></td>
+                                                    <td align="left" width="auto"></td>
+                                                    <td align="right"><span class="cell_price">-75%&nbsp;<b>￥62</b></span>
+                                                        <div class="sep2"></div><span class="cell_price">持平历史低价</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="collapse" id="collapse_target_10">
+                                            <div class="sep5"></div><span>上市日期：2018-06-29</span>
+                                            <div class="sep1"></div>
+                                            <table class="cell_tabs">
+                                                <tbody>
+                                                    <tr>
+                                                        <td><a href="https://store.steampowered.com/app/646910/" target="_blank"><b>Steam 平台</b></a>：</td>
+                                                        <td class="td_right_detail"><span class="cell_price td_strike ">￥248</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" width="auto">历史低价：<b>￥62</b></td>
+                                                        <td class="td_right_detail" width="140">
+                                                            <div class="cell_price"><span>-75%</span> &nbsp;<span>￥62</span></div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>历史低价日期：2019-08-27</td>
+                                                        <td class="td_right_detail" width="100"><span class="cell_price">持平 Steam 低价</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                </td>
+                            </tr>
+                            <tr class="bg-none">
+                                <td>
+                                    <div role="button" data-toggle="collapse" data-target="#collapse_target_11" aria-expanded="false" aria-controls="collapse_target_11">
+                                        <table width="100%">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="left" width="auto"><span><b>Fresh Body</b></span><br /><span>冷鲜肉</span></td>
+                                                    <td align="right"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="sep3"></div>
+                                        <table class="cell_tabs" role="button" data-toggle="collapse" data-target="#collapse_target_11" aria-expanded="false" aria-controls="collapse_target_11">
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top" align="center" width="100"><img src="https://media.st.dl.bscstorage.net/steam/apps/550840/capsule_184x69.jpg" class="img_in_tab"></td>
+                                                    <td width="10"></td>
+                                                    <td align="left" width="auto"><span><img src="./Others/Steam_icon_small.png" />&nbsp;88%</span></td>
+                                                    <td align="right"><span class="cell_price">-61%&nbsp;<b>￥15</b></span>
+                                                        <div class="sep2"></div><span class="cell_price">持平历史低价</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="collapse" id="collapse_target_11">
+                                            <div class="sep5"></div><span>上市日期：2016-11-16</span>
+                                            <div class="sep1"></div><span>社区评价数超过七百 好评率 88%</span>
+                                            <div class="sep3"></div>
+                                            <table class="cell_tabs">
+                                                <tbody>
+                                                    <tr>
+                                                        <td><a href="https://store.steampowered.com/app/550840/" target="_blank"><b>Steam 平台</b></a>：</td>
+                                                        <td class="td_right_detail"><span class="cell_price td_strike ">￥38</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" width="auto">历史低价：<b>￥15</b></td>
+                                                        <td class="td_right_detail" width="140">
+                                                            <div class="cell_price"><span>-61%</span> &nbsp;<span>￥15</span></div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>历史低价日期：2019-09-13</td>
+                                                        <td class="td_right_detail" width="100"><span class="cell_price">持平 Steam 低价</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="sep5"></div><a href="http://www.sonkwo.com/products/3312?game_id=3333" target="_blank"><b>杉果游戏</b></a>：
+                                                        </td>
+                                                        <td class="td_right_detail">
+                                                            <div class="sep5"></div><span class="cell_price td_strike td_no_visible">￥38</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" width="auto">历史低价：￥19</td>
+                                                        <td class="td_right_detail" width="100">
+                                                            <div class="cell_price"><span></span> &nbsp;<span>￥38</span></div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>历史低价日期：2019-06-05</td>
+                                                        <td class="td_right_detail" width="100"><span class="cell_price">当前没有折扣</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                </td>
+                            </tr>
+                            <tr class="bg-none">
+                                <td>
+                                    <div role="button" data-toggle="collapse" data-target="#collapse_target_12" aria-expanded="false" aria-controls="collapse_target_12">
+                                        <table width="100%">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="left" width="auto"><span><b>Batman - The Telltale Series</b></span><br /><span></span></td>
+                                                    <td align="right"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="sep3"></div>
+                                        <table class="cell_tabs" role="button" data-toggle="collapse" data-target="#collapse_target_12" aria-expanded="false" aria-controls="collapse_target_12">
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top" align="center" width="100"><img src="https://media.st.dl.bscstorage.net/steam/apps/498240/capsule_184x69.jpg" class="img_in_tab"></td>
+                                                    <td width="10"></td>
+                                                    <td align="left" width="auto"><span><img src="./Others/Steam_icon_small.png" />&nbsp;74%</span></td>
+                                                    <td align="right"><span class="cell_price">-76%&nbsp;<b>￥12</b></span>
+                                                        <div class="sep2"></div><span class="cell_price"><b>打破历史低价</b></span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="collapse" id="collapse_target_12">
+                                            <div class="sep5"></div><span>上市日期：2016-08-03</span>
+                                            <div class="sep1"></div><span>社区评价数超过六千 好评率 74%</span>
+                                            <div class="sep3"></div>
+                                            <table class="cell_tabs">
+                                                <tbody>
+                                                    <tr>
+                                                        <td><a href="https://store.steampowered.com/app/498240/" target="_blank"><b>Steam 平台</b></a>：</td>
+                                                        <td class="td_right_detail"><span class="cell_price td_strike ">￥50</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" width="auto">历史新低：<b>￥12</b>&nbsp;(▼7)</td>
+                                                        <td class="td_right_detail" width="140">
+                                                            <div class="cell_price"><span>-76%</span> &nbsp;<span>￥12</span></div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>历史低价日期：2019-11-27</td>
+                                                        <td class="td_right_detail" width="100"><span class="cell_price"><b>打破历史低价</b></span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="sep5"></div><span class="td_title">Humble Bundle 参考</span>：
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Humble Telltale Bundle</td>
+                                                        <td class="td_right_detail cell_price" width="100"><span class="cell_price">固定价等级</span><br /><span class="cell_price">$15.00<span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div align="center">
+                    <nav>
+                        <ul class="pagination pagination-sm">
+                            <li><a href="index_1c.html" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                            <li class="active"><a href="index_1c.html">1</a></li>
+                            <li><a href="index_1c_p2.html">2</a></li>
+                            <li><a href="index_1c_p3.html">3</a></li>
+                            <li><a href="index_1c_p4.html">4</a></li>
+                            <li><a href="index_1c_p5.html">5</a></li>
+                            <li><a href="index_1c_p6.html">6</a></li>
+                            <li><a href="index_1c_p7.html">7</a></li>
+                            <li><a href="index_1c_p8.html">8</a></li>
+                            <li><a href="index_1c_p9.html">9</a></li>
+                            <li><a href="index_1c_p10.html">10</a></li>
+                            <li><a href="index_1c_p11.html">11</a></li>
+                            <li><a href="index_1c_p12.html">12</a></li>
+                            <li><a href="index_1c_p2.html" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="sep1"></div>
+        </div>
+    </div>
+    <div id="custFoot"></div>
+    <script>
+    // Load Navbar
+    $("#custNav").load("/navBar.html #custNav")
+    $("#custFoot").load("/navBar.html #custFoot")
+    </script>
+</body>
+
+</html>
